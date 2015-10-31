@@ -6,7 +6,6 @@ python: 2.7
 
 before_install:
   - sudo apt-get update
-  - sudo apt-get -y dist-upgrade
   - sudo apt-get -y install python software-properties-common
 
 install:
