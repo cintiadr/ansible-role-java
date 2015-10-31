@@ -13,4 +13,4 @@ install:
 script:
   - ansible-playbook tests/test.yml -i tests/hosts --syntax-check
   - ansible-playbook tests/test.yml -i tests/hosts --connection=local --sudo
-  - ansible-playbook tests/test.yml -i tests/hosts --connection=local --sudo | grep -q 'failed=0' && exit 0 || exit 1
+  - ansible-playbook tests/test.yml -i tests/hosts --connection=local --sudo | grep -q 'unreachable=0.*failed=0' && exit 0 || exit 1
