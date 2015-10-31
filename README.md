@@ -54,5 +54,7 @@ License
 Author Information
 ------------------
 
--   [@hswong3i](https://twitter.com/hswong3i)
+-   Wong Hoi Sing Edison
+    -   <https://twitter.com/hswong3i>
+    -   <https://github.com/hswong3i>
 
