@@ -8,7 +8,7 @@
   tags: java
 
 - name: apt-get install
-  apt: name={{ item }} state=latest
+  apt: name="{{ item }}" state=latest
   with_items:
     - oracle-java8-installer
     - oracle-java8-set-default
