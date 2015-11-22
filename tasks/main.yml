@@ -5,11 +5,11 @@
   shell: echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections
   register: debconf_set_selections_result
   changed_when: debconf_set_selections_result.rc != 0
-  tags: java
+  tags: hswong3i.java
 
 - name: apt-get install
   apt: name="{{ item }}" state=latest
   with_items:
     - oracle-java8-installer
     - oracle-java8-set-default
-  tags: java
+  tags: hswong3i.java
