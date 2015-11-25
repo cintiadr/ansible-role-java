@@ -1,6 +1,13 @@
 ---
 # tasks file for hswong3i.java
 
+- name: apt-add-repository
+  apt_repository:
+    repo='ppa:webupd8team/java'
+    state=present
+    update_cache=yes
+  tags: hswong3i.java
+
 - name: auto accept license
   shell: echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections
   register: debconf_set_selections_result
