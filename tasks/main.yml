@@ -5,7 +5,6 @@
   apt_repository:
     repo='ppa:webupd8team/java'
     state=present
-    update_cache=yes
   tags: hswong3i.java
 
 - name: auto accept license
