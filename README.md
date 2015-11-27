@@ -23,7 +23,7 @@ No additional role variables.
 Dependencies
 ------------
 
--   [hswong3i.apt](https://galaxy.ansible.com/detail#/role/5970)
+-   [hswong3i.apt](https://github.com/pantarei/ansible-role-apt)
 
 Example Playbook
 ----------------
@@ -35,7 +35,7 @@ Example Playbook
 License
 -------
 
--   Code released under [MIT](https://github.com/hswong3i/ansible-role-java/blob/master/LICENSE)
+-   Code released under [MIT](https://github.com/pantarei/ansible-role-java/blob/master/LICENSE)
 -   Docs released under [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/)
 
 Author Information
