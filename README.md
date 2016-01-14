@@ -2,9 +2,9 @@ Ansible Role for Java
 =====================
 
 [![Build Status](https://travis-ci.org/pantarei/ansible-role-java.svg?branch=master)](https://travis-ci.org/pantarei/ansible-role-java)
- [![GitHub tag](https://img.shields.io/github/tag/pantarei/ansible-role-java.svg)](https://github.com/pantarei/ansible-role-java)
- [![GitHub license](https://img.shields.io/github/license/pantarei/ansible-role-java.svg)](https://github.com/pantarei/ansible-role-java/blob/master/LICENSE)
- [![Ansible Role](https://img.shields.io/ansible/role/5971.svg)](https://galaxy.ansible.com/detail#/role/5971)
+[![GitHub tag](https://img.shields.io/github/tag/pantarei/ansible-role-java.svg)](https://github.com/pantarei/ansible-role-java)
+[![GitHub license](https://img.shields.io/github/license/pantarei/ansible-role-java.svg)](https://github.com/pantarei/ansible-role-java/blob/master/LICENSE)
+[![Ansible Role](https://img.shields.io/ansible/role/5971.svg)](https://galaxy.ansible.com/detail#/role/5971)
 
 Ansible Role for Oracle Java Installation.
 
