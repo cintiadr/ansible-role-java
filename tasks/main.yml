@@ -3,10 +3,10 @@
 
 - name: apt-add-repository
   apt_repository:
-    repo="{{ item }}"
-    state=present
+    repo={{ item.repo }}
+    state={{ item.state }}
   with_items:
-    - ppa:webupd8team/java
+    - { repo: 'ppa:webupd8team/java', state: 'present' }
   tags: hswong3i.java
 
 - name: auto accept license
@@ -17,9 +17,9 @@
 
 - name: apt-get install
   apt:
-    name="{{ item }}"
-    state=latest
+    name={{ item.name }}
+    state={{ item.state }}
   with_items:
-    - oracle-java8-installer
-    - oracle-java8-set-default
+    - { name: 'oracle-java8-installer', state: 'latest' }
+    - { name: 'oracle-java8-set-default', state: 'latest' }
   tags: hswong3i.java
