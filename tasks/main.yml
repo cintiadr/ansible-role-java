@@ -6,7 +6,7 @@
     repo={{ item.repo }}
     state={{ item.state }}
   with_items:
-    - { repo: 'ppa:webupd8team/java', state: 'present' }
+    - { state: 'present', repo: 'ppa:webupd8team/java' }
   tags: hswong3i.java
 
 - name: auto accept license
@@ -20,6 +20,6 @@
     name={{ item.name }}
     state={{ item.state }}
   with_items:
-    - { name: 'oracle-java8-installer', state: 'latest' }
-    - { name: 'oracle-java8-set-default', state: 'latest' }
+    - { state: 'latest', name: 'oracle-java8-installer' }
+    - { state: 'latest', name: 'oracle-java8-set-default' }
   tags: hswong3i.java
