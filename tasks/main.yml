@@ -3,8 +3,8 @@
 
 - name: apt-add-repository
   apt_repository:
-    repo={{ item.repo }}
-    state={{ item.state }}
+    repo="{{ item.repo }}"
+    state="{{ item.state }}"
   with_items:
     - { state: 'present', repo: 'ppa:webupd8team/java' }
   tags: hswong3i.java
@@ -17,8 +17,8 @@
 
 - name: apt-get install
   apt:
-    name={{ item.name }}
-    state={{ item.state }}
+    name="{{ item.name }}"
+    state="{{ item.state }}"
   with_items:
     - { state: 'latest', name: 'oracle-java8-installer' }
     - { state: 'latest', name: 'oracle-java8-set-default' }
