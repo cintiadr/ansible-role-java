@@ -3,23 +3,24 @@
 
 - name: apt-add-repository
   apt_repository:
-    repo={{ item.repo }}
-    state={{ item.state }}
+    repo: "{{ item.repo }}"
+    state: "{{ item.state }}"
   with_items:
-    - { state: 'present', repo: 'ppa:webupd8team/java' }
+    - { state: "present", repo: "ppa:webupd8team/java" }
   tags: hswong3i.java
 
 - name: auto accept license
-  shell: echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections
+  shell: |
+    echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections
   register: debconf_set_selections_result
   changed_when: debconf_set_selections_result.rc != 0
   tags: hswong3i.java
 
 - name: apt-get install
   apt:
-    name={{ item.name }}
-    state={{ item.state }}
+    name: "{{ item.name }}"
+    state: "{{ item.state }}"
   with_items:
-    - { state: 'latest', name: 'oracle-java8-installer' }
-    - { state: 'latest', name: 'oracle-java8-set-default' }
+    - { state: "latest", name: "oracle-java8-installer" }
+    - { state: "latest", name: "oracle-java8-set-default" }
   tags: hswong3i.java
