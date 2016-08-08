@@ -1,12 +1,15 @@
 ---
 # tasks file for hswong3i.java
 
+- name: include release specific variables
+  include_vars: "{{ ansible_distribution_release }}.yml"
+  tags: hswong3i.java
+
 - name: apt-add-repository
   apt_repository:
     repo: "{{ item.repo }}"
     state: "{{ item.state }}"
-  with_items:
-    - { state: "present", repo: "ppa:webupd8team/java" }
+  with_items: "{{ _apt_repository }}"
   tags: hswong3i.java
 
 - name: auto accept license
@@ -20,7 +23,6 @@
   apt:
     name: "{{ item.name }}"
     state: "{{ item.state }}"
-  with_items:
-    - { state: "latest", name: "oracle-java8-installer" }
-    - { state: "latest", name: "oracle-java8-set-default" }
+  with_items: "{{ _apt }}"
+  notify: restart java
   tags: hswong3i.java
