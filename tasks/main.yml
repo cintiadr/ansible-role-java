@@ -24,5 +24,4 @@
     name: "{{ item.name }}"
     state: "{{ item.state }}"
   with_items: "{{ _apt }}"
-  notify: restart java
   tags: hswong3i.java
