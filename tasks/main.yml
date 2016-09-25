@@ -13,10 +13,11 @@
   tags: hswong3i.java
 
 - name: auto accept license
-  shell: |
-    echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections
-  register: debconf_set_selections_result
-  changed_when: debconf_set_selections_result.rc != 0
+  debconf:
+    name: "oracle-java8-installer"
+    question: "shared/accepted-oracle-license-v1-1"
+    vtype: "select"
+    value: "true"
   tags: hswong3i.java
 
 - name: apt-get install
